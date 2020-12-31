@@ -26,6 +26,6 @@ services:
     image: sawtooth-pbft-local:${ISOLATION_ID}
     volumes:
       - ../../:/project/sawtooth-pbft
-      - ${Pipeline.Workspace}/cargo/target:/project/sawtooth-pbft/target
-      - ${Pipeline.Workspace}/cargo/registry:/root/.cargo/registry
-      - ${Pipeline.Workspace}/cargo/git:/root/.cargo/git
+      - ${WORKSPACE}/cargo/target:/project/sawtooth-pbft/target
+      - ${WORKSPACE}/cargo/registry:/root/.cargo/registry
+      - ${WORKSPACE}/cargo/git:/root/.cargo/git
