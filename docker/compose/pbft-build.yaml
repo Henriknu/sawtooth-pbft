@@ -26,6 +26,6 @@ services:
     image: sawtooth-pbft-local:${ISOLATION_ID}
     volumes:
       - ../../:/project/sawtooth-pbft
-      - cargo/target:/project/sawtooth-pbft/target
-      - cargo/registry:/root/.cargo/registry
-      - cargo/git:/root/.cargo/git
+      - /cargo/target:/project/sawtooth-pbft/target
+      - /cargo/registry:/root/.cargo/registry
+      - /cargo/git:/root/.cargo/git
