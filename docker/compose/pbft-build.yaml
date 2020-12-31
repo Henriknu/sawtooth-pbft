@@ -12,10 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-version: '3.6'
+version: "3.6"
 
 services:
-
   pbft:
     build:
       context: ../../
@@ -27,3 +26,6 @@ services:
     image: sawtooth-pbft-local:${ISOLATION_ID}
     volumes:
       - ../../:/project/sawtooth-pbft
+      - cargo/target:/project/sawtooth-pbft/target
+      - cargo/registry:/root/.cargo/registry
+      - cargo/git:/root/.cargo/git
